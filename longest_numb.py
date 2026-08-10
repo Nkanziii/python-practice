@@ -213,7 +213,108 @@ def group_by_letter(arr):
             results[item[0]] = [item]
 
             
+    #return results
+
+# print(group_by_letter(["apple", "banana", "avocado", "blueberry", "cherry"]))
+# returns {"a": ["apple", "avocado"], "b": ["banana", "blueberry"], "c": ["cherry"]}
+
+# 
+
+def two_sum(arr, num):
+
+    for i in range(len(arr)):
+        for j in range(i+1, len(arr)):
+            if arr[i] + arr[j] == num:
+                return[i, j]
+
+# print(two_sum([2, 7, 11, 15], 9))
+# print(two_sum([3, 2, 4], 6))
+
+
+#
+def count_vowels(sentence):
+    vowels = ["a", "e", "i", "o", "u"]
+
+    counter = 0
+
+
+    for char in sentence:
+        if char in vowels:
+            counter += 1
+
+    return counter
+
+
+# print(count_vowels("hello world"))
+
+def find_duplicates(arr):
+    new_list = []
+    removed = []
+
+    for num in arr:
+        if num not in new_list:
+            new_list.append(num)
+        else:
+            new_list.remove(num)
+            removed.append(num)
+            
+    return removed
+
+# print(find_duplicates([1, 2, 3, 2, 4, 3, 5]))
+# print(find_duplicates([1, 2, 3, 4]))
+
+def num_to_words(num):
+    numbers = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8: "eight", 9: "nine"}
+
+    return numbers[num]
+# print(num_to_words(2))
+
+def title_case(str):
+    results = ""
+
+    words = str.split()
+
+    for char in words:
+        results += char[0].upper() + char[1:] + " "
+
     return results
 
-print(group_by_letter(["apple", "banana", "avocado", "blueberry", "cherry"]))
-# returns {"a": ["apple", "avocado"], "b": ["banana", "blueberry"], "c": ["cherry"]}
+    
+
+# print(title_case("hello world"))
+# print(title_case("i love python"))
+
+def validate_password(str):
+    has_digit = False
+    has_upper = False
+    has_length = len(str) >= 8
+
+    for char in str:
+        if char.isdigit():
+            has_digit = True
+        elif char.isupper():
+            has_upper = True
+        elif str == has_length:
+            return True
+   
+    return has_digit and has_upper and has_length 
+
+
+#print(validate_password("Hello1world"))
+#print(validate_password("hello"))
+#print(validate_password("HelloWorld"))
+
+def most_frequent(arr):
+    results = {}
+
+    for item in arr:
+        if item in results:
+            results[item] += 1
+        else:
+            results[item] = 1
+    
+    return max(results, key=lambda x: results[x])
+    
+
+        
+print(most_frequent([1, 3, 2, 1, 4, 1, 3]))
