@@ -328,7 +328,14 @@ def reverse_list(arr):
         
     return results
 
-print(reverse_list([1, 2, 3, 4, 5]))
-print(reverse_list([10, 20, 30, 40, 50]))
+# print(reverse_list([1, 2, 3, 4, 5]))
+# print(reverse_list([10, 20, 30, 40, 50]))
 
 # range(start, stop, step)
+
+def is_anagram(word_one, word_two):
+
+    return sorted(word_one) == sorted(word_two)
+
+print(is_anagram("listen", "silent"))
+print(is_anagram("hello", "world"))
