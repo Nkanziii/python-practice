@@ -395,6 +395,19 @@ def count_upper(str):
             results += 1
     return results
 
-print(count_upper("Hello World"))
-print(count_upper("PYTHON"))
-print(count_upper("hello"))
+#print(count_upper("Hello World"))
+#print(count_upper("PYTHON"))
+#print(count_upper("hello"))
+
+def sum_digits(num):
+    string = str(num)
+
+    results = []
+
+    for char in string:
+        number = int(char)
+        results.append(number)
+    return sum(results)
+        
+
+print(sum_digits(123))
