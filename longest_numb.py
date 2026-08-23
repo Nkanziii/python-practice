@@ -337,5 +337,64 @@ def is_anagram(word_one, word_two):
 
     return sorted(word_one) == sorted(word_two)
 
-print(is_anagram("listen", "silent"))
-print(is_anagram("hello", "world"))
+# print(is_anagram("listen", "silent"))
+# print(is_anagram("hello", "world"))
+
+def word_count(str):
+
+    return len(str.split(" "))
+
+# print(word_count("hello world how are you"))
+
+def find_missing(arr):
+
+    n = len(arr) + 1
+    expected = n * (n + 1) / 2
+    actual = sum(arr)
+    return int(expected - actual)
+    
+
+#print(find_missing([1, 2, 4, 5, 6]))
+
+def is_balanced(str):
+    counter = 0
+
+    for char in str:
+        if char == "(":
+            counter += 1
+        elif char == ")":
+            counter -= 1
+        if counter < 0:
+            return False
+
+    return counter == 0
+          
+
+#print(is_balanced("(hello)"))     # True
+#rint(is_balanced("(hello"))      # False
+#print(is_balanced("((hello))"))   # True
+#print(is_balanced(")("))          # False)
+    
+def is_anagram(str1, str2):
+    word = str1.replace(" ", "").lower()
+    word_two = str2.replace(" ", "").lower()
+
+    return sorted(word) == sorted(word_two)
+
+    
+
+#print(is_anagram("Listen", "Silent"))
+#print(is_anagram("Astronomer", "Moon starer"))
+#print(is_anagram("hello", "world"))
+
+def count_upper(str):
+    results = 0
+
+    for char in str:
+        if char.isupper():
+            results += 1
+    return results
+
+print(count_upper("Hello World"))
+print(count_upper("PYTHON"))
+print(count_upper("hello"))
