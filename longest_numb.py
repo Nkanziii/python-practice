@@ -410,4 +410,18 @@ def sum_digits(num):
     return sum(results)
         
 
-print(sum_digits(123))
+#print(sum_digits(123))
+
+def remove_vowels(str):
+    vowels = ["a", "e", "i", "o", "u"]
+
+    results = []
+
+    for char in str:
+        if char not in vowels:
+            results.append(char)
+
+    return "".join(results)
+
+
+print(remove_vowels("hello world"))
