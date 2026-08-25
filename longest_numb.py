@@ -424,4 +424,21 @@ def remove_vowels(str):
     return "".join(results)
 
 
-print(remove_vowels("hello world"))
+#print(remove_vowels("hello world"))
+def common_elements(arr1, arr2):
+    results = []
+
+    for item in arr1:
+        for char in arr2:
+            if item == char:
+                results.append(item)
+
+    return results
+
+print(common_elements([1, 2, 3, 4], [3, 4, 5, 6]))
+print(common_elements(["apple", "banana"], ["banana", "cherry"]))
+
+# Also can do:
+# for item in arr1:
+#   if item in arr2:
+#       results.append(item)
