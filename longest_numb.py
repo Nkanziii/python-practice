@@ -435,10 +435,23 @@ def common_elements(arr1, arr2):
 
     return results
 
-print(common_elements([1, 2, 3, 4], [3, 4, 5, 6]))
-print(common_elements(["apple", "banana"], ["banana", "cherry"]))
+#print(common_elements([1, 2, 3, 4], [3, 4, 5, 6]))
+#print(common_elements(["apple", "banana"], ["banana", "cherry"]))
 
 # Also can do:
 # for item in arr1:
 #   if item in arr2:
 #       results.append(item)
+
+def flatten(arr):
+    results = []
+
+    for item in arr:
+        if isinstance(item, list):
+            results.extend(flatten(item))
+        else:
+            results.append(item)
+
+    return results
+
+print(flatten([1, [2, 3], [4, [5, 6]], 7]))
