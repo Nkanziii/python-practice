@@ -454,4 +454,11 @@ def flatten(arr):
 
     return results
 
-print(flatten([1, [2, 3], [4, [5, 6]], 7]))
+#print(flatten([1, [2, 3], [4, [5, 6]], 7]))
+
+def squares(arr):
+    results = [num * num for num in arr]
+    return results
+
+print(squares([1, 2, 3, 4, 5]))
+
