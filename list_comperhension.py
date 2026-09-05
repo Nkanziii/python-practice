@@ -16,4 +16,11 @@ def word_lengths(arr):
    results = {word: len(word) for word in arr}
    return results
 
-print(word_lengths(["hello", "world", "python"]))
+#print(word_lengths(["hello", "world", "python"]))
+
+def long_words_upper(arr):
+    result = [word.upper() for word in arr if len(word) > 4]
+    return result
+
+print(long_words_upper(["hi", "hello", "python", "is", "great"]))
+
