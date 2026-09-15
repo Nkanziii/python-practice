@@ -46,5 +46,33 @@ class ContactBook:
     def show_all(self):
         for contact in self.contacts:
             print(contact)
-        
 
+book = ContactBook()
+
+while True:
+    print("1. Add contact")
+    print("2. Find Contact")
+    print("3. Delete Contact")
+    print("4. Show all")
+    print("5. Save and quit")
+
+    choice = input("Pick an option: ")
+
+    if choice == "1":
+        name = input("Name: ")
+        phone = input("Phone: ")
+        email = input("Email: ")
+        book.add_contact(Contact(name, phone, email))
+    elif choice == "2":
+        contact_name = input("Enter contact name: ")
+        result = book.find_contact(contact_name)
+        print(result)
+    elif choice == "3":
+        contact_name = input("Enter contact name: ")
+        book.delete_contact(contact_name)
+    elif choice == "4":
+        book.show_all()
+    elif choice == "5":
+        book.save()
+        break
+        
