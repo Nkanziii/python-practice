@@ -22,3 +22,21 @@ def missing_number(arr):
     return int(missing_num)
 
 print(missing_number([1, 2, 4, 5, 6]))
+
+def first_unique(str):
+    counts = {}
+
+    for char in str:
+        if char in counts:
+            counts[char] += 1
+        else:
+            counts[char] = 1
+
+    for char in str:
+        if counts[char] == 1:
+            return char
+   
+    return None
+
+print(first_unique("aabbcde"))
+    
