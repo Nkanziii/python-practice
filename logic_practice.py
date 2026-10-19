@@ -39,4 +39,14 @@ def first_unique(str):
     return None
 
 print(first_unique("aabbcde"))
+
+def is_palindrome(str):
+    cleaned = str.replace(" ","").lower()
+
+    return cleaned == cleaned[::-1]
+        
+
+print(is_palindrome("niki "))
+print(is_palindrome("A man a plan a canal Panama"))
+    
     
