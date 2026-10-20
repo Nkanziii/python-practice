@@ -49,4 +49,18 @@ def is_palindrome(str):
 print(is_palindrome("niki "))
 print(is_palindrome("A man a plan a canal Panama"))
     
-    
+def count_vc(str):
+    results = {"vowels": 0, "consonants": 0}
+    vowels = ["a", "e", "i", "o", "u"]
+    cleaned = str.replace(" ", "").strip().lower()
+
+    for char in cleaned:
+        if char in vowels:
+            results["vowels"] += 1
+        else:
+            results["consonants"] += 1
+            
+
+    return results
+
+print(count_vc("Hello World"))
