@@ -112,3 +112,19 @@ def merge_sorted(list1, list2):
 
 print(merge_sorted([1, 3, 5], [2, 4, 6]))
 print(merge_sorted([1, 2, 3], [4, 5, 6]))
+
+
+def max_subarray(arr):
+    current_sum = 0
+    max_sum = 0
+
+    for num in arr:
+        current_sum += num
+        if current_sum < 0:
+            current_sum = 0
+        max_sum = max(max_sum, current_sum)
+
+    return max_sum
+
+
+print(max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
