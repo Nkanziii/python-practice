@@ -64,3 +64,29 @@ def count_vc(str):
     return results
 
 print(count_vc("Hello World"))
+
+def remove_nums(arr):
+    numbers = [1,2,3,4,5]
+
+    for num in numbers:
+        if num % 2 == 0:
+            numbers.remove(num)
+
+    return numbers
+
+print(remove_nums([1, 2, 3, 4, 5]))
+
+def remove_sorted_duplicates(arr):
+
+    results = []
+    prev = None
+
+    for num in arr:
+        if num != prev:
+            results.append(num)
+
+        prev = num
+
+    return results
+
+print(remove_sorted_duplicates([1, 1, 2, 3, 3, 4]))
