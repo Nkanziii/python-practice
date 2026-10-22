@@ -90,3 +90,25 @@ def remove_sorted_duplicates(arr):
     return results
 
 print(remove_sorted_duplicates([1, 1, 2, 3, 3, 4]))
+
+def merge_sorted(list1, list2):
+    results = []
+
+    i = 0
+    j = 0
+
+    while i < len(list1) and j < len(list2):
+        if list1[i] < list2[j]:
+            results.append(list1[i])
+            i += 1
+        else:
+            results.append(list2[j])
+            j += 1
+
+    results += list1[i:]
+    results += list2[j:]
+
+    return results
+
+print(merge_sorted([1, 3, 5], [2, 4, 6]))
+print(merge_sorted([1, 2, 3], [4, 5, 6]))
