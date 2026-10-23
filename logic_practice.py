@@ -128,3 +128,20 @@ def max_subarray(arr):
 
 
 print(max_subarray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+
+def find_duplicate(arr):
+    results = {}
+
+    for num in arr:
+        if num in results:
+            results[num] += 1
+        else:
+            results[num] = 1
+
+    for x, y in results.items():
+        if y == 2:
+            return x
+
+print(find_duplicate([1, 3, 4, 2, 2]))
+print(find_duplicate([3, 1, 3, 4, 2]))
+        
