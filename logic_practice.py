@@ -144,4 +144,20 @@ def find_duplicate(arr):
 
 print(find_duplicate([1, 3, 4, 2, 2]))
 print(find_duplicate([3, 1, 3, 4, 2]))
-        
+
+
+def max_window_sum(arr, k):
+
+    max_window = 0
+
+    for i in range(len(arr) - k + 1):
+        window = arr[i:i+k]
+        window_sum = sum(window)
+        max_window = max(max_window, window_sum)
+
+    return max_window
+
+    
+
+print(max_window_sum([2, 1, 5, 1, 3, 2], 3))
+print(max_window_sum([1, 4, 2, 9, 7, 3], 2))
