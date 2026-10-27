@@ -161,3 +161,23 @@ def max_window_sum(arr, k):
 
 print(max_window_sum([2, 1, 5, 1, 3, 2], 3))
 print(max_window_sum([1, 4, 2, 9, 7, 3], 2))
+
+def longest_unique_substring(str):
+
+    window = set()
+    left = 0
+    max_length = 0
+
+    for char in str:
+        while char in window:
+            window.remove(str[left])
+            left += 1
+        window.add(char)
+        max_length = max(max_length, len(window))
+
+
+    return max_length
+
+print(longest_unique_substring("abcabcbb"))
+print(longest_unique_substring("bbbbb"))    
+print(longest_unique_substring("pwwkew"))  
