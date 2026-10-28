@@ -181,3 +181,14 @@ def longest_unique_substring(str):
 print(longest_unique_substring("abcabcbb"))
 print(longest_unique_substring("bbbbb"))    
 print(longest_unique_substring("pwwkew"))  
+
+def index_slices(arr):
+    return arr[::-2]
+
+print(f"answer is: {index_slices([1,2,3,4,5,6,7,8,9,10])}")
+
+
+def convert_temps(arr):
+    return [(c * 9/5) + 32 for c in arr]
+
+print(f"Fahrenheit values = {convert_temps([0, 100, 37])}")
