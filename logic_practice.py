@@ -192,3 +192,9 @@ def convert_temps(arr):
     return [(c * 9/5) + 32 for c in arr]
 
 print(f"Fahrenheit values = {convert_temps([0, 100, 37])}")
+
+def reverse_words(str):
+    split_words = str.split()[::-1]
+    return " ".join(split_words)
+
+print(reverse_words("the sky is blue"))
