@@ -198,3 +198,9 @@ def reverse_words(str):
     return " ".join(split_words)
 
 print(reverse_words("the sky is blue"))
+
+def is_anagram(word1, word2):
+    return sorted(word1) == sorted(word2)
+
+print(is_anagram("listen", "silent"))
+print(is_anagram("hello", "world"))  
