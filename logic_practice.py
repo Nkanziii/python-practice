@@ -204,3 +204,23 @@ def is_anagram(word1, word2):
 
 print(is_anagram("listen", "silent"))
 print(is_anagram("hello", "world"))  
+
+def most_common(arr):
+    results = {}
+    best_count = 0
+    best_item = None
+
+    for char in arr:
+        if char in results:
+            results[char] += 1
+        else:
+            results[char] = 1
+
+    for x, y in results.items():
+        if y > best_count:
+            best_item = x
+            best_count = y
+
+    return best_item
+
+print(most_common([1, 3, 2, 3, 3, 1]))
