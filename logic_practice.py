@@ -224,3 +224,16 @@ def most_common(arr):
     return best_item
 
 print(most_common([1, 3, 2, 3, 3, 1]))
+
+def second_largest(arr):
+    no_duplicates = set(arr)
+    sorted_list = sorted(no_duplicates)
+
+    if len(sorted_list) < 2:
+        return None
+
+    return sorted_list[-2]
+        
+print(second_largest([4, 9, 2, 9, 7]))
+print(second_largest([10, 5, 8]))  
+print(second_largest([5, 5, 5]))
