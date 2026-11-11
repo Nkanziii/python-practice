@@ -237,3 +237,18 @@ def second_largest(arr):
 print(second_largest([4, 9, 2, 9, 7]))
 print(second_largest([10, 5, 8]))  
 print(second_largest([5, 5, 5]))
+
+def title_case(str):
+    stripped = str.split()
+    results = []
+
+    for char in stripped:
+        slicing = char[0].upper() + char[1:]
+        results.append(slicing)
+
+    return " ".join(results)
+        
+
+    
+
+print(title_case("the sky is blue"))
