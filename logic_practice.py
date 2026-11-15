@@ -249,6 +249,20 @@ def title_case(str):
     return " ".join(results)
         
 
-    
-
 print(title_case("the sky is blue"))
+
+def group_by_length(arr):
+    result={}
+
+    for word in arr:
+        if len(word) in result:
+            result[len(word)].append(word)
+        else: 
+            result[len(word)] = [word]
+       
+
+    return result
+
+print(group_by_length(["hi", "bye"]))
+print(group_by_length(["hi", "cat", "dog", "go", "bird"]))
+print(group_by_length([]))
