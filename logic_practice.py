@@ -266,3 +266,18 @@ def group_by_length(arr):
 print(group_by_length(["hi", "bye"]))
 print(group_by_length(["hi", "cat", "dog", "go", "bird"]))
 print(group_by_length([]))
+
+def sum_digits(number):
+    string_num = str(number)
+    current_count = 0
+
+    for num in string_num:
+        current_count += int(num)
+
+    return current_count
+        
+
+print(sum_digits(123))
+print(sum_digits(9045))
+print(sum_digits(0))
+
